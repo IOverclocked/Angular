@@ -21,12 +21,12 @@ class ExampleFunctions {
     console.log(message + " " + message2);
   }
 
-  helloArrowFunction = (message) => console.log("Hello world arrow function" + message);
+  helloArrowFunction = message =>
+    console.log("Hello world arrow function" + message);
 
   helloArrowFunction2 = () => console.log("ArrowFunction");
 
   helloArrowFunction3 = (message: string) => console.log(message);
-
 }
 
 var example = new ExampleFunctions();
