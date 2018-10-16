@@ -21,7 +21,12 @@ class ExampleFunctions {
     console.log(message + " " + message2);
   }
 
-  helloArrowFunction = message => console.log("Hello world arrow function" + message);
+  helloArrowFunction = (message) => console.log("Hello world arrow function" + message);
+
+  helloArrowFunction2 = () => console.log("ArrowFunction");
+
+  helloArrowFunction3 = (message: string) => console.log(message);
+
 }
 
 var example = new ExampleFunctions();
@@ -31,3 +36,5 @@ example.helloArg("Example string");
 example.helloManyArgLastOptional("Example string");
 example.helloManyArgLastOptionalSet("Example string");
 example.helloArrowFunction("ArrowFunction");
+example.helloArrowFunction2();
+example.helloArrowFunction3("ArrowFunction");

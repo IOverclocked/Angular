@@ -2,6 +2,8 @@ var ExampleFunctions = /** @class */ (function () {
     function ExampleFunctions() {
         this.msg = "HelloWorld";
         this.helloArrowFunction = function (message) { return console.log("Hello world arrow function" + message); };
+        this.helloArrowFunction2 = function () { return console.log("ArrowFunction"); };
+        this.helloArrowFunction3 = function (message) { return console.log(message); };
     }
     ExampleFunctions.prototype.showMsg = function () {
         console.log(this.msg);
@@ -28,3 +30,5 @@ example.helloArg("Example string");
 example.helloManyArgLastOptional("Example string");
 example.helloManyArgLastOptionalSet("Example string");
 example.helloArrowFunction("ArrowFunction");
+example.helloArrowFunction2();
+example.helloArrowFunction3("ArrowFunction");
