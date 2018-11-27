@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class TaskComponent implements OnInit {
 
-    constructor() { }
+    text = 'jestem';
 
-    text = 'spoko';
+    constructor() { }
 
     ngOnInit() {
     }

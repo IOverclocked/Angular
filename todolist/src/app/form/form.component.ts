@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-form',
@@ -7,16 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-    taskContent = '';
+    taskContent: string;
+
+    @Output()
+    emitTaskContent = new EventEmitter<string>();
 
     constructor() { }
 
-    ngOnInit() {
-    }
+    ngOnInit() { }
 
-    addTask(event, taskContent) {
-        event.preventDefault();
-        console.log(taskContent);
+    addTask() {
+        this.emitTaskContent.emit(this.taskContent);
+        this.taskContent = '';
     }
 
 }

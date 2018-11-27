@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+
     title = 'todolist';
+    tasksToDo: Array<string> = [];
+    tasksDone: Array<string> = [];
+
+    addTask(taskContent: string) {
+        this.tasksToDo.push(taskContent);
+    }
+
 }
