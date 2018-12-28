@@ -1,0 +1,40 @@
+<div>
+    <!-- ngIf -->
+    <h2 *ngIf="displayName; else elseBlock">
+        It's true!
+    </h2>
+    <ng-template #elseBlock>
+        <h2>
+            It's false!
+        </h2>
+    </ng-template>
+
+    <div *ngIf="control; then thenBlock else elseBlock"></div>
+
+    <ng-template #thenBlock>
+        <h2>It's true!</h2>
+    </ng-template>
+
+    <ng-template #elseBlock>
+        <h2>It's false!</h2>
+    </ng-template>
+
+    <!-- ngSwitch -->
+
+    <div [ngSwitch]="color">
+        <div *ngSwitchCase="'red'">Red</div>
+        <div *ngSwitchCase="'green'">Green</div>
+        <div *ngSwitchCase="'blue'">Blue</div>
+    </div>
+
+    <!-- ngFor -->
+
+    <div *ngFor="let color of colors; index as i; first as f; last as l; odd as o">
+        <p [style.color]="color"><span>{{i}}. </span>{{color}}</p>
+        <p [style.color]="color"><strong>{{l}}</strong></p>
+        <p [style.color]="color"><strong>{{f}}</strong></p>
+        <p [style.color]="color"><strong>{{o}}</strong></p>
+    </div>
+
+
+</div>
