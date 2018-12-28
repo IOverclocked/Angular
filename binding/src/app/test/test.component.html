@@ -1,0 +1,52 @@
+<div>
+    <!-- simple binding -->
+    <p>{{name}}</p>
+    <p>{{'Witaj' + name}}</p>
+    <p>{{name.length}}</p>
+    <p>{{name.toUpperCase()}}</p>
+    <p>{{greetUser()}}</p>
+
+    <!-- properties binding -->
+    <input type="text" name="name" [id]="myId" [value]="name">
+    <input type="text" name="name" id="{{myId}}" value="{{name}}">
+    <input type="text" name="name" [disabled]="isDisabled">
+
+    <!-- class binding -->
+    <div [class]="classTextSuccess">
+        {{name}}
+    </div>
+    <div [class.text-error]="hasError">
+        {{name}}
+    </div>
+    <div [ngClass]="messageClass">
+        {{greetUser()}}
+    </div>
+
+    <!-- style binding -->
+    <div [style.color]="'orange'">
+        {{greetUser()}}
+    </div>
+    <div [style.color]="hasError ? 'red' : hightlightColor">
+        {{greetUser()}}
+    </div>
+    <div [ngStyle]="titleStyle">
+        {{greetUser()}}
+    </div>
+
+    <!-- event binding -->
+    <button (click)="handleClick()">Click</button>
+
+    <h3>{{messageOnClick}}</h3>
+
+    <button (click)="handleClick2($event)">Click</button>
+    <hr />
+
+    <input #myInput type="text">
+    <button (click)="logMessage(myInput.value)">Log</button>
+
+    <hr />
+    <!-- two way binding -->
+    <input [(ngModel)]="name" type="text">
+    {{name}}
+
+</div>
