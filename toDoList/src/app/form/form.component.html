@@ -1,0 +1,5 @@
+<form id="form">
+    <label for="task"></label>
+    <input [(ngModel)]="contentTask" name="task" type="text" placeholder="task content">
+    <button (click)="addTask(contentTask)">Add</button>
+</form>

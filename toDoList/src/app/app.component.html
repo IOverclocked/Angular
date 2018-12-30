@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="app-conatiner">
+    {{task}}
+    <div id="form-container">
+        <app-form (task)="task=$event"></app-form>
+    </div>
+
+    <div id="list-container">
+        <app-list [tasks]="tasks"></app-list>
+    </div>
+
+</div>
